@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/group_order">
+        <item
+            android:id="@+id/action_location"
+            android:title=""
+            android:icon="@mipmap/ic_google_maps"
+            app:showAsAction="always">
+        </item>
+
+        <item
+            android:id="@+id/action_printer"
+            android:title=""
+            android:icon="@mipmap/ic_printer"
+            app:showAsAction="always">
+        </item>
+
+        <item
+            android:id="@+id/action_alert"
+            android:title=""
+            android:icon="@mipmap/ic_alert_circle_outline"
+            app:showAsAction="always">
+        </item>
+
+        <item
+            android:id="@+id/action_check"
+            android:title=""
+            android:icon="@mipmap/ic_check"
+            app:showAsAction="always">
+        </item>
+    </group>
+</menu>

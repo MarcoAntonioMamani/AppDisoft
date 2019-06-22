@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    lintOptions {
+        disable "ResourceType"
+    }
+    repositories {
+        maven {
+            url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.luisbar.waterdelivery"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Activación del soporte multidex.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+compile files('libs/ZSDK_ANDROID_API.jar')
+   // compile files('libs/ZQ110.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.google.android.gms:play-services-location:10.0.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'com.jakewharton:butterknife:8.4.0'
+
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    compile 'com.strongloop:loopback-sdk-android:1.6.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile "org.apache.httpcomponents:httpcore:4.3.2"
+
+    compile 'com.uphyca:stetho_realm:2.0.0'
+    compile 'com.facebook.stetho:stetho:1.4.1'
+
+    compile 'com.github.HendrixString:Android-PdfMyXml:v1.0.1'
+    compile 'com.github.barteksc:android-pdf-viewer:2.3.0'
+    compile 'com.github.kenglxn.QRGen:android:2.2.0'
+
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'com.google.firebase:firebase-crash:10.0.1'
+    compile 'com.google.firebase:firebase-storage:10.0.1'
+
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    // It is for print
+    compile 'au.com.bytecode:opencsv:2.4'
+
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

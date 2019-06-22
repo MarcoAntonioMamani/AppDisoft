@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="@dimen/stroke" android:color="@color/colorAccent"/>
+            <size android:width="@dimen/size" android:height="@dimen/size"/>
+        </shape>
+    </item>
+    <item android:top="@dimen/margin_radio_button" android:right="@dimen/margin_radio_button" android:bottom="@dimen/margin_radio_button" android:left="@dimen/margin_radio_button">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorAccent"/>
+        </shape>
+    </item>
+</layer-list>

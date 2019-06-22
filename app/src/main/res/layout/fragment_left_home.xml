@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_left_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.view.activity.MainActivity"
+    android:background="@color/color_1">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_left_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_5">
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/fab_left_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/floating_button"
+            fab:fab_addButtonColorNormal="?attr/colorAccent"
+            fab:fab_addButtonSize="normal"
+            fab:fab_labelStyle="@style/LabelsTheme"
+            fab:fab_labelsPosition="left">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/color_2"
+                fab:fab_icon="@mipmap/ic_cart_plus"
+                fab:fab_size="mini"
+                fab:fab_title="@string/txt_5"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add_client"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/color_2"
+                fab:fab_icon="@mipmap/ic_account_plus"
+                fab:fab_size="mini"
+                fab:fab_title="@string/txt_4"/>
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".presentation.view.activity.MainActivity"
+    android:background="@color/color_1"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_13"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/font_size_buttons_body"
+                    android:textColor="@color/color_3"
+                    android:textStyle="bold"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_order_client_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fab_icon_size"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/font_size_buttons_body"
+                    android:textColor="@color/color_3"
+                    android:focusableInTouchMode="false"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:inputType="text"
+                    android:completionThreshold="1"
+                    android:background="@color/azulclaro"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_14"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/font_size_buttons_body"
+                    android:textColor="@color/color_3"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_order_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fab_icon_size"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/font_size_buttons_body"
+                    android:textColor="@color/color_3"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/txt_69"
+                    android:background="@color/azulclaro"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_24"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/font_size_buttons_body"
+            android:textColor="@color/color_3"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/et_order_state"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fab_icon_size"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/font_size_buttons_body"
+            android:textColor="@color/color_3"
+            android:focusableInTouchMode="false"
+            android:lines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:inputType="text"
+            android:background="@color/azulclaro"/>
+
+        <TextView
+            android:id="@+id/text_payment_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_27"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/font_size_buttons_body"
+            android:textColor="@color/color_3"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/ll_payment_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginBottom="15dp"
+            >
+
+            <EditText
+                android:id="@+id/et_order_payment_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fab_icon_size"
+                android:layout_marginRight="@dimen/margin"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/font_size_buttons_body"
+                android:textColor="@color/color_3"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:focusableInTouchMode="false"
+                android:background="@color/azulclaro"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/rb_cash"
+                android:layout_gravity="center_vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_cash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_28"
+                    android:layout_weight="1"
+                    style="@style/RadionButton"/>
+
+                <RadioButton
+                    android:id="@+id/rb_credit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_29"
+                    android:layout_weight="1"
+                    style="@style/RadionButton"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab_new_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/floating_button"
+        fab:fab_addButtonColorNormal="?attr/colorAccent"
+        fab:fab_addButtonSize="normal"
+        android:visibility="gone">
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</android.support.design.widget.CoordinatorLayout>

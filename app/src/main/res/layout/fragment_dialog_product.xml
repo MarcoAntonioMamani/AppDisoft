@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_11"
+        android:layout_marginTop="@dimen/margin_message_top"
+        android:layout_marginRight="@dimen/margin_all"
+        android:layout_marginLeft="@dimen/margin_all"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/font_size_buttons_body"
+        android:textColor="@color/color_3"
+        android:textStyle="bold"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/input_dialog_product"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fab_icon_size"
+        android:layout_marginLeft="@dimen/margin_all"
+        android:layout_marginRight="@dimen/margin_all"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/font_size_buttons_body"
+        android:textColor="@color/color_3"
+        android:inputType="text"
+        android:completionThreshold="1"
+        android:background="@color/azulclaro"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:drawableBottom="@android:color/holo_blue_bright"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_25"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginRight="@dimen/margin_all"
+        android:layout_marginLeft="@dimen/margin_all"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/font_size_buttons_body"
+        android:textColor="@color/color_3"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/input_dialog_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fab_icon_size"
+        android:layout_marginLeft="@dimen/margin_all"
+        android:layout_marginRight="@dimen/margin_all"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/font_size_buttons_body"
+        android:textColor="@color/color_3"
+        android:inputType="numberDecimal"
+        android:background="@color/azulclaro"/>
+</LinearLayout>
